@@ -1,11 +1,7 @@
-	LD B, 04H
-	LD IX,1900H
-	XOR A
-LOOP:	LD A, (IX+00)
-	ADC A, (IX+04)
-	LD (IX+8) ,A
-	INC IX
-	DEC B
-	JP NZ, LOOP
-	HALT ;halt cpu
-	.END	
+	LD D,2FH
+	LD E,D
+	LD C,01H
+	LD C,D
+	INC D
+	HALT 
+	.END
